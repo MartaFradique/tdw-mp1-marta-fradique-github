@@ -21,6 +21,7 @@ jobs:
       - run: npx prettier --write .
       - run: npm run lint
       - run: npm run build
+      - run: cd ./out
       - name: Netlify Deploy
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
