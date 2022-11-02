@@ -1,5 +1,6 @@
 import Container from './container'
 import cn from 'classnames'
+import Link from 'next/link'
 import { EXAMPLE_PATH } from '../lib/constants'
 
 export default function Alert({ preview }) {
@@ -14,15 +15,11 @@ export default function Alert({ preview }) {
         <div className="py-2 text-center text-sm">
           {preview ? (
             <>
-              This is page is a preview.{' '}
-              <a
-                href="/api/exit-preview"
-                className="underline hover:text-cyan duration-200 transition-colors"
-              >
-                Click here
-              </a>{' '}
-              to exit preview mode.
-            </>
+            This is page is a preview.{" "}
+            <Link href="/api/exit-preview" className="underline hover:text-cyan duration-200 transition-colors">
+              <a>Click here to exit preview mode.</a>
+            </Link>
+          </>
           ) : (
             <>
               The source code for this blog is{' '}
