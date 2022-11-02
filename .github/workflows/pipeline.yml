@@ -43,9 +43,13 @@ jobs:
   build: 
     runs-on: ubuntu-latest 
     needs: [validation] 
+    steps:
       - uses: actions/checkout@v2 
+      - name: Cache node modules
         id: cache-nodemodules
-        uses: actions/setup-node@v3 
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
         with:
           path: node_modules
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
