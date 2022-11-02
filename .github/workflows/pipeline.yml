@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Cache node modules
-        id: cache-node-modules
+        id: cache-nodemodules
         uses: actions/cache@v2
         env:
           cache-name: cache-node-modules
