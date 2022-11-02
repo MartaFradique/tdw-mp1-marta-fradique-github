@@ -5,7 +5,7 @@ on:
     branches:
       '**'
   schedule:
-    - cron: '42 23 * * *'
+    - cron: '0 0 * * *'
   repository_dispatch:
     types: [publish-events]
 
