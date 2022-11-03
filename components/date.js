@@ -5,5 +5,6 @@ export default function DateComponent({ dateString }) {
     <time dateTime={dateString}>
       {format(new Date(dateString), 'LLLL	d, yyyy')}
     </time>
+    // testinho
   )
 }
